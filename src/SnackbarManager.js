@@ -11,7 +11,6 @@ export default class {
   }
 
   show(propsData) {
-    (propsData)
     const SnackbarComponent = Vue.extend(AppSnackbar)
     const instance = new SnackbarComponent({
       parent: this.root,

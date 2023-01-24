@@ -33,7 +33,7 @@ export default {
       default: () => {
         return {}
       },
-    }
+    },
   },
   methods: {
     close() {
@@ -44,7 +44,7 @@ export default {
           this.$el.remove()
         })
       }, 500)
-    }
+    },
   },
   render(createElement) {
     const children = [this.message]
@@ -53,22 +53,26 @@ export default {
     if (this.actionSlot) {
       scopedSlots.action = this.actionSlot
     } else {
-      scopedSlots.action = () => createElement(VBtn, {
-        props: {
-          text: true,
-          color: 'pink'
-        },
-        on: {
-          click: () => {
-            const callback = this.listeners['close']
-            if (callback) {
-              callback()
-            }
-          }
-        }
-      }, 'Close')
+      scopedSlots.action = () =>
+        createElement(
+          VBtn,
+          {
+            props: {
+              text: true,
+              color: 'pink',
+            },
+            on: {
+              click: () => {
+                const callback = this.listeners['close']
+                if (callback) {
+                  callback()
+                }
+              },
+            },
+          },
+          'Close'
+        )
     }
-
 
     return createElement(
       VSnackbar,
@@ -81,8 +85,8 @@ export default {
             if (callback) {
               callback()
             }
-          }
-        }
+          },
+        },
       },
       children
     )
