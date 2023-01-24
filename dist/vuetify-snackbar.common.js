@@ -4592,10 +4592,7 @@ var VSnackbar = __webpack_require__("ca71");
     if (this.actionSlot) {
       scopedSlots.action = this.actionSlot;
     } else {
-      scopedSlots.action = ({
-        attrs
-      }) => createElement(VBtn_VBtn, {
-        attrs,
+      scopedSlots.action = () => createElement(VBtn_VBtn, {
         props: {
           text: true,
           color: 'pink'
@@ -4615,7 +4612,10 @@ var VSnackbar = __webpack_require__("ca71");
       scopedSlots,
       on: {
         input: () => {
-          console.log('on input');
+          const callback = this.listeners['input'];
+          if (callback) {
+            callback();
+          }
         }
       }
     }, children);
