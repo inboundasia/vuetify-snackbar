@@ -4602,13 +4602,18 @@ var VSnackbar = __webpack_require__("ca71");
             const callback = this.listeners['close'];
             if (callback) {
               callback();
+            } else {
+              this.close(); // fallback to default close
             }
           }
         }
       }, 'Close');
     }
     return createElement(VSnackbar_VSnackbar, {
-      props: Object.assign({}, this.props),
+      // default value is true
+      props: Object.assign({
+        value: true
+      }, this.props),
       scopedSlots,
       on: {
         input: () => {
@@ -4753,7 +4758,6 @@ var AppSnackbar_component = normalizeComponent(
   }
   show(propsData) {
     var _this$options;
-    propsData;
     const SnackbarComponent = external_commonjs_vue_commonjs2_vue_root_Vue_default.a.extend(AppSnackbar);
     const instance = new SnackbarComponent({
       parent: this.root,
