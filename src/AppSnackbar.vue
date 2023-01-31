@@ -1,14 +1,3 @@
-<!-- <template>
-  <v-snackbar v-bind.sync="props">
-    {{ message }}
-    <template v-slot:action="{ attrs }">
-      <v-btn color="pink" text v-bind="attrs" @click="props.value = false">
-        Close
-      </v-btn>
-    </template>
-  </v-snackbar>
-</template> -->
-
 <script>
 import { VSnackbar, VBtn } from 'vuetify/lib'
 
@@ -66,6 +55,8 @@ export default {
                 const callback = this.listeners['close']
                 if (callback) {
                   callback()
+                } else {
+                  this.close() // fallback to default close
                 }
               },
             },
@@ -77,7 +68,8 @@ export default {
     return createElement(
       VSnackbar,
       {
-        props: Object.assign({}, this.props),
+        // default value is true
+        props: Object.assign({ value: true }, this.props),
         scopedSlots,
         on: {
           input: () => {
