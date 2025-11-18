@@ -18,7 +18,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preversion": "git pull --tags",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "vue": "^3.4.0"
