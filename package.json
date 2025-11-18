@@ -1,6 +1,6 @@
 {
   "name": "@inboundasia/vuetify-snackbar",
-  "version": "0.1.1",
+  "version": "2.0.0",
   "type": "module",
   "main": "src/index.js",
   "module": "src/index.js",
