@@ -2,23 +2,29 @@
   "name": "@inboundasia/vuetify-snackbar",
   "version": "2.0.2",
   "type": "module",
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "./dist/vuetify-snackbar.umd.js",
+  "module": "./dist/vuetify-snackbar.es.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/inboundasia/vuetify-snackbar"
   },
   "exports": {
     ".": {
-      "import": "./src/index.js",
-      "require": "./src/index.js",
-      "default": "./src/index.js"
-    }
+      "import": "./dist/vuetify-snackbar.es.js",
+      "require": "./dist/vuetify-snackbar.umd.js",
+      "default": "./dist/vuetify-snackbar.es.js"
+    },
+    "./style.css": "./dist/style.css"
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "prepublishOnly": "npm run build",
     "preversion": "git pull --tags",
     "postversion": "git push && git push --tags"
   },
