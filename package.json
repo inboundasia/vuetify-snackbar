@@ -1,9 +1,13 @@
 {
-  "name": "digitspark-snackbar",
+  "name": "@inboundasia/vuetify-snackbar",
   "version": "0.1.0",
   "type": "module",
   "main": "src/index.js",
   "module": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inboundasia/vuetify-snackbar"
+  },
   "exports": {
     ".": {
       "import": "./src/index.js",
