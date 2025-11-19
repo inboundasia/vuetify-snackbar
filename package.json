@@ -1,6 +1,6 @@
 {
   "name": "@inboundasia/vuetify-snackbar",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "type": "module",
   "main": "./dist/vuetify-snackbar.umd.js",
   "module": "./dist/vuetify-snackbar.es.js",
