@@ -18,7 +18,7 @@
       "require": "./dist/vuetify-snackbar.umd.js",
       "default": "./dist/vuetify-snackbar.es.js"
     },
-    "./style.css": "./dist/style.css"
+    "./style.css": "./dist/index.css"
   },
   "scripts": {
     "dev": "vite",

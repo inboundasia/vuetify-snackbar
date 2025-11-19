@@ -10,9 +10,12 @@ export default defineConfig({
       name: 'VuetifySnackbar',
       fileName: (format) => `vuetify-snackbar.${format}.js`
     },
+    cssCodeSplit: true,
+    minify: false,
     rollupOptions: {
       external: ['vue'],
       output: {
+        exports: 'named',
         globals: {
           vue: 'Vue'
         }
